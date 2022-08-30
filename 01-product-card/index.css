@@ -1,1 +1,36 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+@font-face {
+  font-family: 'Arial Black';
+  src: url(./arial/ARIBLK.woff);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.title {
+  font-family: 'Arial Black';
+  margin: 40px 0 40px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+.products {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__card {
+  width: 380px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
