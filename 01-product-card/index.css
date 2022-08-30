@@ -3,34 +3,148 @@
   src: url(./arial/ARIBLK.woff);
 }
 
+@font-face {
+  font-family: Arial;
+  src: url(./arial/ARIAL.woff);
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 40px 0 60px 0;
+  background-color: #f6f6f6;
+
 }
 
 ul {
   list-style-type: none;
 }
 
+p {
+  font-family: Arial;
+  font-size: 16px;
+}
+
 .title {
   font-family: 'Arial Black';
-  margin: 40px 0 40px;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 48px;
   line-height: 72px;
 }
 
 .products {
-  width: 1180px;
+  max-width: 1180px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .products__card {
   width: 380px;
-  border-radius: 8px;
+  height: 482px;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
 }
+
+.products__tags {
+  width: 263px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__tag {
+  border-radius: 8px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products__tag_new {
+  width: 111px;
+  background-color: #fdcff3;
+}
+
+.products__tag_last {
+  width: 136px;
+  background-color: #ffcf56;
+}
+
+.products__title {
+  font-family: 'Arial Black';
+  margin: 20px 0 0 24px;
+}
+
+.products__description {
+  margin: 18px 24px 24px 24px;
+  line-height: 24px;
+}
+
+.products__button {
+  width: 332px;
+  height: 48px;
+  font-family: 'Arial Black';
+  font-size: 18px;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 8px;
+  border: 2px solid #42940f;
+  background-color: transparent;
+  color: #42940f;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.products__button:hover {
+  background-color: #42940f;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.products__button:active {
+  background-color: #1f5200;
+  border-color: #1f5200;
+  color: #ffffff;
+}
+
+.products__button.disabled {
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1220px) {
+  .products {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .title {
+    font-size: 2em;
+  }
+}
+
+
 
